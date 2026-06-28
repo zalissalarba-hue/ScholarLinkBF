@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <title>ScholarLinkBF</title>
+</head>
+
+<h2>Postuler à un stage</h2>
+
+<form method="POST" class="p-3">
+
+    <!-- Domaine -->
+    <div class="mb-3">
+        <label class="form-label">Domaine du stage</label>
+        <select name="domaine" class="form-control" required>
+            <option value="">-- Choisir un domaine --</option>
+            <option>Informatique</option>
+            <option>Réseaux et télécommunication</option>
+            <option>Data Science</option>
+             <option>Développement Web</option>
+             <option>Droit</option>
+            <option>Marketing</option>
+            <option>Gestion de pojets</option>
+            <option>Santé</option>
+             <option>Agriculture</option>
+        </select>
+    </div>
+
+    <!-- Titre -->
+    <div class="mb-3">
+        <label class="form-label">Titre du stage</label>
+        <input type="text"
+               name="titre"
+               class="form-control"
+               placeholder="Ex : Stage développeur web">
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+        <label class="form-label">Description du stage</label>
+        <textarea name="description"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Décris le stage ici..."></textarea>
+    </div>
+
+    <!-- Bouton -->
+    <button type="submit" class="btn btn-success w-100">
+        Postuler
+    </button>
+
+</form>
+
