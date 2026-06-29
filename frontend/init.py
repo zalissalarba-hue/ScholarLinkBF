@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from config import Config
+from frontend.config import Config
 
 db = SQLAlchemy()
 login_manager = LoginManager()
@@ -15,7 +15,7 @@ def create_app():
     login_manager.init_app(app)
     login_manager.login_view = "main.login"
 
-    from views.ROUTES import main
+    from frontend.views.ROUTES import main
     app.register_blueprint(main)
 
     with app.app_context():

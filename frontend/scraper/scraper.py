@@ -1,5 +1,5 @@
-from models import Bourse
-from app import db
+from frontend.models import Bourse
+from frontend.app import db
 
 bourse = Bourse(
     title=titre,

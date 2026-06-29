@@ -1,4 +1,4 @@
-from extensions import db
+from frontend.extensions import db
 
 class Application(db.Model):
 

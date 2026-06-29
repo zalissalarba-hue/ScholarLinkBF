@@ -1,20 +1,18 @@
-from extensions import db
+from frontend.extensions import db
 
-class Scholarship(db.Model):
+class Internship(db.Model):
 
-    __tablename__ = "scholarships"
+    __tablename__ = "internships"
 
     id = db.Column(db.Integer, primary_key=True)
 
     titre = db.Column(db.String(255))
 
-    organisme = db.Column(db.String(255))
+    entreprise = db.Column(db.String(255))
 
-    pays = db.Column(db.String(100))
+    localisation = db.Column(db.String(100))
 
     domaine = db.Column(db.String(100))
-
-    niveau = db.Column(db.String(100))
 
     date_limite = db.Column(db.String(100))
 

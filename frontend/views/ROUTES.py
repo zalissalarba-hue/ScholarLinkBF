@@ -2,10 +2,10 @@ import os
 from werkzeug.utils import secure_filename
 from flask import current_app
 
-from models import Candidature
+from frontend.models import Candidature
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from models import db,User,Bourse, Stage
+from frontend.models import db,User,Bourse, Stage
 from flask import login_manager
 
 
