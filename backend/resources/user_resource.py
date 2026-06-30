@@ -3,6 +3,9 @@ from flask_restful import Resource
 from marshmallow import ValidationError
 from models.user import User, db
 from schemas.user_schema import UserSchema
+from sqlalchemy.exc import IntegrityError
+
+
 
 class UserResource(Resource):
     user_schema = UserSchema()
@@ -17,14 +20,27 @@ class UserResource(Resource):
             return self.user_list_schema.dump(all_users)
 
     def post(self):
+        data = request.json
+
+        # Vérification avant insertion
+        existing_user = User.query.filter_by(email=data.get("email")).first()
+        if existing_user:
+            return {"message": "Email already exists"}, 400
+
         try:
-            new_user = self.user_schema.load(request.json)
+            # Validation avec Marshmallow
+            new_user = self.user_schema.load(data)
+            db.session.add(new_user)
+            db.session.commit()
+            return self.user_schema.dump(new_user), 201
+
         except ValidationError as err:
             return {"message": "Validation error", "errors": err.messages}, 400
 
-        db.session.add(new_user)
-        db.session.commit()
-        return self.user_schema.dump(new_user), 201
+        except IntegrityError:
+            # Filet de sécurité en cas de concurrence
+            db.session.rollback()
+
 
     def put(self, user_id):
         user = User.query.get_or_404(user_id)
