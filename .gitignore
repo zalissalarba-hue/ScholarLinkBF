@@ -35,6 +35,7 @@ migrations/versions/
 # --- PostgreSQL ---
 *.sql
 *.psql
+*.bkp
 
 
 # --- Config / secrets ---
