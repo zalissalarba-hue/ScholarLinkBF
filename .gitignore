@@ -1,25 +1,60 @@
-*.env
-
-
-local/
-.vscode/
-
-
-*.log
-*.pot
-*.pyc
+# --- Python ---
 __pycache__/
-db.sqlite3
-media/
-instance/
-
-
 *.py[cod]
-*$py.class
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
 
-.env
-.venv/
-venv/
+# --- Virtualenv / Conda ---
 env/
+venv/
+.venv/
 ENV/
-.link
+env.bak/
+*.conda
+
+# --- IDE / éditeurs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Flask / SQLAlchemy ---
+instance/
+migrations/versions/
+*.db
+*.sqlite3
+
+# --- PostgreSQL ---
+*.sql
+*.psql
+
+# --- Config / secrets ---
+.env
+*.env.*
+config_local.py
+
+# --- Tests / coverage ---
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# --- Build / packaging ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+
+# --- Local ---
+local/
