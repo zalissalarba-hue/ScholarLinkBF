@@ -5,3 +5,5 @@ flask-marshmallow
 marshmallow-sqlalchemy
 psycopg2-binary
 flask-migrate
+python-dotenv
+
