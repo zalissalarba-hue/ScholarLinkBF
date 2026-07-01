@@ -9,8 +9,9 @@ class UserSchema(ma.SQLAlchemyAutoSchema):
         model = User
         load_instance = True   # Retourne directement une instance User
 
-    @validates("email")
-    def validate_email(self, value):
+  #  @validates("email")
+   # def validate_email(self, value):
         # Vérifie si l'email existe déjà
-        if User.query.filter_by(email=value).first():
-            raise ValidationError("Email already exists")
+     #   if User.query.filter_by(email=value).first():
+       #     raise ValidationError("Email already exists")
+       

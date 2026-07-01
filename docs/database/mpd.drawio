@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="LISBtuF7s6w7vFYNtw79">
-        <mxGraphModel dx="1474" dy="721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="494" dy="427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="4l1s7Pd_QIP51o0qK7VY-1" value="USERS" style="shape=table;startSize=40;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;fontStyle=1;fillColor=default;gradientColor=none;swimlaneFillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="240" width="600" height="280" as="geometry"/>
+                    <mxGeometry x="114" y="50" width="600" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="4l1s7Pd_QIP51o0qK7VY-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontStyle=1" parent="4l1s7Pd_QIP51o0qK7VY-1" vertex="1">
                     <mxGeometry y="40" width="600" height="40" as="geometry"/>
