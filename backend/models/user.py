@@ -1,6 +1,7 @@
 import uuid
-from flask_sqlalchemy import SQLAlchemy
 from . import db
+
+
 
 class User(db.Model):
     __tablename__ = "users"
@@ -11,5 +12,8 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
 
+    # Relation many-to-many avec Bourse
+    bourses = db.relationship("Bourse", secondary="users_bourses", back_populates="users")
+
     def __repr__(self):
-        return f"<User {self.nom} {self.prenom}>"
+        return f"<User id={self.id} email={self.email} nom={self.nom} prenom={self.prenom}>"

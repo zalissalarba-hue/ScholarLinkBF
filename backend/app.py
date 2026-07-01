@@ -99,6 +99,8 @@ from models import db
 from schemas.user_schema import ma
 from resources.user_resource import UserResource
 from flask_migrate import Migrate
+from resources.bourse_resource import BourseResource
+
 
 def create_app():
     app = Flask(__name__)
@@ -112,6 +114,7 @@ def create_app():
     # API RESTful
     api = Api(app)
     api.add_resource(UserResource, "/users", "/users/<string:user_id>")
+    api.add_resource(BourseResource, "/bourses", "/bourses/<string:bourse_id>")
 
     return app
 
